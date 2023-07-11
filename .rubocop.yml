@@ -1,9 +1,21 @@
 AllCops:
   NewCops: enable
   Exclude:
-    - "Guardfile"
-    - "Rakefile"
-    - "node_modules/**/*"
+    - 'db/**/*'
+    - 'bin/*'
+    - 'app/*'
+    - 'config/**/*'
+    - 'Guardfile'
+    - 'Rakefile'
+    - 'node_modules/**/*'
+    - 'vendor/**/*'
+    - 'spec/**/*'
+    - 'test/**/*'
+    - 'features/**/*'
+    - 'lib/actionmailbox/**/*'
+    - app/mailers/application_mailer.rb
+    - Gemfile
+    - config.ru
 
   DisplayCopNames: true
 

@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.greeting-btn {
+  width: 150px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #253587;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.greeting-btn:hover {
+  background-color: #1e2d5e;
+}
