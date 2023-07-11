@@ -14,12 +14,12 @@ function Greetings() {
 
 	return (
 		<div className="center">
-			{singleGreeting && <h2>{singleGreeting.greeting}</h2>}
 			<button
 				onClick={() => dispatch(fetchGreetings())}
 				className="greeting-btn">
-				Get Greeting
+				Press Me
 			</button>
+			{singleGreeting && <h1>{singleGreeting.greeting}</h1>}
 		</div>
 	);
 }
