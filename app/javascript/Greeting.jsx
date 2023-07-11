@@ -1,16 +1,17 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { setGreeting } from './store';
+import React, { useEffect, useState } from 'react';
+import getGreeting from './api';
 
 const Greeting = () => {
-  const greeting = useSelector((state) => state);
-  const dispatch = useDispatch();
+  const [greeting, setGreeting] = useState('');
 
   useEffect(() => {
-    fetch('/random_greeting')
-      .then((response) => response.json())
-      .then((data) => dispatch(setGreeting(data.greeting)));
-  }, [dispatch]);
+    const fetchGreeting = async () => {
+      const newGreeting = await getGreeting();
+      setGreeting(newGreeting);
+    };
+
+    fetchGreeting();
+  }, []);
 
   return (
     <div>
